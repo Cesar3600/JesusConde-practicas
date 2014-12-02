@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+	<style>
+	.remarcar{
+		font-weight: bold;
+	}
+	</style>
+</head>
+
+<body >
+	<h3>Listado de libros existentes</h3>
+	<div ng-controller='controlLibreria'>
+		<p ng-repeat='libro in libros'><span class='remarcar'>titulo:</span> {{libro.titulo}} -  <span class='remarcar'>Autor:</span>{{libro.autor}}</p>
+
+	<br>
+	<br>
+	<br>
+		<div>
+			<h3>Ingreso de libros</h3>
+			<br>
+				Titulo: <input type="text" ng-model="nuevoTitulo"><br><br>
+				Autor: <input type="text" ng-model="nuevoAutor"><br><br>
+
+			<br>
+			<button ng-click="ingresar()">ingresar libro & autor</button>
+		</div>
+	</div>
+
+
+
+
+
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="06a_construir_formulario_libros.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+
+</head>
+
+<body ng-controller='controlTelefonosMoviles'>
+	<div ng-repeat="telefono in telefonos">
+		{{telefono.modelo}} - {{telefono.marca}} - {{telefono.year}}
+	</div>
+	<br>
+	<br>
+	<br>
+	<h4>ingreso de modelos de telefono</h4>
+		modelo: <input type="text" ng-model="nmodelo1"><br><br>
+		marca: <input type="text" ng-model="nmarca2"><br><br>
+		year: <input type="text" ng-model="nyear3"><br><br>
+		<button ng-click="ingresar()">ingresar modelo</button>
+
+
+
+
+
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="06b_construir_formulario_telefonos.js"></script>
+
+</body>
+
+</html>

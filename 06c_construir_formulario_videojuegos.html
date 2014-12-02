@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head></head>
+
+<body ng-controller="control">
+	<h3>lista de videojuegos</h3>
+
+	<div ng-repeat='videojuego in videojuegos'>
+		<div>{{videojuego.titulo}} - {{videojuego.genero}}</div>
+	</div>
+	<br><br><br>
+
+	<div>
+		<h4>ingreso de videojuegos</h4>
+		titulo: <input type="text" ng-model="ntitulo"><br><br>
+		genero:
+			<select ng-model='tgenero'>
+				<option ng-repeat='g in generos' value="{{g.genero}}">{{g.genero}}</option>
+			</select>
+		<button ng-click="ingresar()">ingresar</button>
+	</div>
+
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="06c_construir_formulario_videojuegos.js"></script>
+
+</body>
+
+</html>
